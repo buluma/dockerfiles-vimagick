@@ -151,6 +151,7 @@ A collection of delicious docker recipes.
 
 - [x] cmus
 - [x] cmus-arm
+- [x] editly :tv:
 - [x] ffmpeg
 - [x] ffmpeg-arm
 - [x] ffserver :beetle:
@@ -365,6 +366,7 @@ A collection of delicious docker recipes.
 - [x] owncloud
 - [x] phpmyadmin
 - [x] pihole/pihole
+- [x] mcr.microsoft.com/playwright
 - [x] portainer/portainer :+1:
 - [x] postgres
 - [x] postgrest/postgrest
