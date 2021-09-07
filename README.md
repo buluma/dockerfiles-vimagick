@@ -28,7 +28,6 @@ A collection of delicious docker recipes.
 - [ ] ipset
 - [ ] irc
 - [ ] libreswan
-- [ ] mitmproxy
 - [ ] nagios
 - [ ] openswan
 - [ ] postfix
@@ -101,6 +100,7 @@ A collection of delicious docker recipes.
 - [x] alpine-arm :+1:
 - [x] apacheds
 - [x] aria2 :+1:
+- [x] ariang
 - [x] cadvisor
 - [x] casperjs :+1:
 - [x] freegeoip
@@ -341,6 +341,7 @@ A collection of delicious docker recipes.
 - [x] mailhog/mailhog
 - [x] tootsuite/mastodon
 - [x] getmeili/meilisearch :mag:
+- [x] mitmproxy/mitmproxy
 - [x] deluan/navidrome :musical_note:
 - [x] netdata/netdata
 - [x] nextcloud
