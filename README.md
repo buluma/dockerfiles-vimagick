@@ -152,6 +152,7 @@ A collection of delicious docker recipes.
 
 - [x] cmus
 - [x] cmus-arm
+- [x] darkice :musical_note:
 - [x] editly :tv:
 - [x] ffmpeg
 - [x] ffmpeg-arm
@@ -161,6 +162,7 @@ A collection of delicious docker recipes.
 - [x] minidlna
 - [x] mpd :musical_note:
 - [x] murmur
+- [x] node-media-server-arm :camera: :cn:
 - [x] openmeetings :camera:
 - [x] paddle-ocr
 - [x] plex :moneybag:
