@@ -24,6 +24,7 @@ RUN set -xe \
                python3 \
                python3-dev \
     && curl -sSL https://bootstrap.pypa.io/get-pip.py | python3 \
+    && pip3 install pip==20.1 \
     && pip3 install --no-cache-dir gunicorn supervisor \
     && pip3 install --no-cache-dir --install-option=--prefix=/opt/graphite \
                     --install-option=--install-lib=/opt/graphite/lib \
@@ -32,6 +33,7 @@ RUN set -xe \
     && pip3 install --no-cache-dir --install-option=--prefix=/opt/graphite \
                     --install-option=--install-lib=/opt/graphite/webapp \
                     graphite-web==$GRAPHITE_VERSION \
+    && pip3 install pyparsing==2.4.7 \
     && cd ./webapp \
     && echo "SECRET_KEY = '$(head -c 16 /dev/urandom | base64)'" >> graphite/local_settings.py \
     && cd ../conf \
@@ -44,11 +46,11 @@ RUN set -xe \
     && apk del build-base \
                curl \
                libffi-dev \
-               python-dev \
+               python3-dev \
     && rm -rf /root/.cache/pip \
               /var/cache/apk/*
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/http.d/default.conf
 COPY supervisord.conf /etc/supervisor/
 
 VOLUME $GRAPHITE_CONF_DIR \
