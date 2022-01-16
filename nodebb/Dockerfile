@@ -5,7 +5,7 @@
 FROM alpine:3
 MAINTAINER EasyPi Software Foundation
 
-ENV BB_VER=1.17.0
+ENV BB_VER=1.19.0
 ENV BB_URL=https://github.com/NodeBB/NodeBB/archive/v$BB_VER.tar.gz
 ENV BB_SOURCE=/usr/src/nodebb
 ENV BB_CONTENT=/var/lib/nodebb
@@ -18,14 +18,14 @@ RUN set -ex \
                   icu \
                   imagemagick \
                   nodejs \
-                  nodejs-npm \
+                  npm \
                   openssl \
     && apk add -t TMP build-base \
                       curl \
                       git \
                       icu-dev \
                       openssl-dev \
-                      python \
+                      python3 \
                       tar \
     && curl -sSL $BB_URL | tar xz --strip 1 \
     && ./nodebb setup \
